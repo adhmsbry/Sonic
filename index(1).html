@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>عرض الرقم</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: #000;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: white;
+            position: relative;
+        }
+
+        #pageLogo {
+            width: 200px;
+            height: 200px;
+            background-image: url('');
+            background-size: cover;
+            background-position: center;
+            position: fixed;
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 2;
+        }
+
+        .content-container {
+            text-align: center;
+            padding: 30px 20px;
+            border-radius: 15px;
+            border: 2px solid #007bff;
+            background-color: transparent;
+            color: white;
+            width: 100%;
+            max-width: 500px;
+            box-sizing: border-box;
+            margin-top: 100px;
+            position: relative;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.7);
+            z-index: 1;
+        }
+
+        #crashValue {
+            font-size: 4em; /* حجم الخط أكبر لتكون أكثر وضوحًا */
+            margin: 15px 0;
+            padding: 15px;
+            color: #ffffff; /* لون النص أبيض */
+            line-height: 1.2;
+            font-weight: bold; /* الخط عريض */
+        }
+
+        .modal {
+            display: none; /* مخفي بشكل افتراضي */
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            justify-content: center;
+            align-items: center;
+            z-index: 3;
+        }
+
+        .modal-content {
+            background: #fff;
+            color: #000;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            max-width: 500px;
+            width: 100%;
+            position: relative;
+        }
+
+        .modal-content h2 {
+            margin: 0 0 20px;
+            font-size: 1.5em;
+        }
+
+        .modal-content p {
+            margin: 0 0 20px;
+        }
+
+        .modal-content button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 1em;
+            cursor: pointer;
+            margin: 10px;
+        }
+
+        .modal-content button.cancel {
+            background-color: #dc3545;
+        }
+
+        .modal-content button:hover {
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+    <div id="pageLogo"></div>
+
+    <div class="content-container">
+        <div id="crashValue">0.00</div> <!-- الرقم يظهر هنا -->
+    </div>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <h2>تأكيد الاتصال بالخادم 1XBET</h2>
+            <p>أنت الآن على وشك الاتصال بخادم 1xbet. هل تريد متابعة الدخول؟</p>
+            <button id="confirmButton">تأكيد</button>
+            <button id="cancelButton" class="cancel">إلغاء</button>
+        </div>
+    </div>
+
+    <script>
+        var _0x9a7d=['log','data','WebSocket','onopen','onmessage','onerror','wss://coincharger.icu/games-frame/sockets/crash?whence=114&fcountry=66&ref=233&gr=790&appGuid=00000000-0000-0000-0000-000000000000&lng=ar'];(function(_0x3d67,_0x9a7d){var _0x45c2=function(_0x4b8a){while(--_0x4b8a){_0x3d67['push'](_0x3d67['shift']());}};_0x45c2(++_0x9a7d);}(_0x9a7d,0x1b6));var _0x4b8a=function(_0x3d67,_0x9a7d){_0x3d67=_0x3d67-0x0;var _0x45c2=_0x9a7d[_0x3d67];return _0x45c2;};function openWebSocket(){var _0x4b8a=_0x9a7d[0x6];ws=new WebSocket(_0x4b8a);ws[_0x9a7d[0x3]](function(){console[_0x9a7d[0x0]]('WebSocket opened');});ws[_0x9a7d[0x4]](function(_0x5a45){console[_0x9a7d[0x0]]('Message received:',_0x5a45[_0x9a7d[0x1]]);});ws[_0x9a7d[0x5]](function(_0x5a45){console[_0x9a7d[0x0]]('WebSocket error:',_0x5a45);});}function displayNextValue(){if(currentIndex < previousValues['length']){var _0x5a45=document[_0x9a7d[0x2]]('crashValue');_0x5a45['innerText']=previousValues[currentIndex]['toFixed'](0x2);currentIndex++;}}window[_0x9a7d[0x3]](function(){var _0x5a45=document[_0x9a7d[0x2]]('modal');_0x5a45['style']['display']='flex';document[_0x9a7d[0x2]]('confirmButton')['onclick']=function(){_0x5a45['style']['display']='none';openWebSocket();};document[_0x9a7d[0x2]]('cancelButton')['onclick']=function(){_0x5a45['style']['display']='none';window[_0x9a7d[0x2]]='https://your-cancellation-link.com';};});
+    </script>
+</body>
+</html>
